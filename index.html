@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Consultancy</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <img src="welcome_image.jpg" alt="Welcome Image" class="hero-image">
+            <h1>Cybersecurity Consultancy</h1>
+            <p>Your Trusted Partner in Cybersecurity Solutions</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <ul class="service-list">
+                <li class="service">
+                    <h3>Basic Package</h3>
+                    <p>Perfect for small businesses and startups.</p>
+                    <form action="send_request.php" method="POST" class="request-form">
+                        <input type="hidden" name="selected_package" value="Basic">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="text" name="organization" placeholder="Your Organization" required>
+                        <button type="submit">Get Basic Package</button>
+                    </form>
+                </li>
+                <li class="service">
+                    <h3>Premium Package</h3>
+                    <p>Advanced protection for growing businesses.</p>
+                    <form action="send_request.php" method="POST" class="request-form">
+                        <input type="hidden" name="selected_package" value="Premium">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="text" name="organization" placeholder="Your Organization" required>
+                        <button type="submit">Get Premium Package</button>
+                    </form>
+                </li>
+                <li class="service">
+                    <h3>Pro Package</h3>
+                    <p>Comprehensive security for enterprises.</p>
+                    <form action="send_request.php" method="POST" class="request-form">
+                        <input type="hidden" name="selected_package" value="Pro">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="text" name="organization" placeholder="Your Organization" required>
+                        <button type="submit">Get Pro Package</button>
+                    </form>
+                </li>
+                <!-- Add more services as needed -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Webinar and Events Section -->
+    <section id="webinar-events" class="webinar-events">
+        <div class="container">
+            <h2>Upcoming Webinar and Events</h2>
+            <div class="event">
+                <img src="webinar_image.jpg" alt="Webinar Image">
+                <h3>Webinar Title</h3>
+                <p>Date: DD/MM/YYYY</p>
+                <p>Join us for an informative webinar on cybersecurity.</p>
+                <a href="#" class="cta-button">Register Now</a>
+            </div>
+            <div class="event">
+                <img src="event_image.jpg" alt="Event Image">
+                <h3>Event Title</h3>
+                <p>Date: DD/MM/YYYY</p>
+                <p>Participate in our cybersecurity event and network with industry experts.</p>
+                <a href="#" class="cta-button">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+<!-- Membership Signup Section -->
+<section id="membership" class="membership">
+    <div class="container">
+        <h2>Book For Appointment</h2>
+        <p>Join our exclusive membership program for additional benefits and resources.</p>
+        <form action="send_appointment.php" method="POST" class="signup-form" onsubmit="return validateForm()">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="date" name="appointment_date" id="appointment_date" placeholder="Preferred Date" required>
+            <select name="appointment_time" id="appointment_time" required>
+                <option value="" disabled selected>Select Time</option>
+                <option value="09:00 AM">09:00 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <!-- Add more time slots as needed -->
+            </select>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Sign Up for Membership</button>
+        </form>
+        <p id="availability_message"></p>
+    </div>
+</section>
+
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are a team of cybersecurity experts dedicated to protecting your business from cyber threats. With years of experience and a proven track record, we provide tailored solutions to meet your unique security needs.</p>
+        </div>
+    </section>
+
+    <!-- Founders and Shareholders Section -->
+    <section id="founders-shareholders" class="founders-shareholders">
+        <div class="container">
+            <h2>Founders and Shareholders</h2>
+            <div class="founder">
+                <img src="founder1.jpg" alt="Founder 1">
+                <h3>John Doe</h3>
+                <p>Co-Founder & CEO</p>
+            </div>
+            <div class="founder">
+                <img src="founder2.jpg" alt="Founder 2">
+                <h3>Jane Smith</h3>
+                <p>Co-Founder & CTO</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have a question or need our assistance? Get in touch with us today!</p>
+            <form action="send_request.php" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Cybersecurity Consultancy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Your JavaScript code or additional scripts here -->
+</body>
+</html>
